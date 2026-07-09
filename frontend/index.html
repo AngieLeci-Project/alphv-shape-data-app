@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALPHV Shape Data</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-badge">A</div>
+        ALPHV
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Admin Portal</a>
+        <a href="index.html" class="active">User Portal</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-content">
+        <h1>User Portal</h1>
+        <p>Last updated: <span id="last-updated">-</span></p>
+
+        <div class="table-wrapper">
+          <div class="table-header">
+            <h2>All Entries <span id="total-count" class="total-badge"></span></h2>
+          </div>
+
+          <table border="1" id="shape-table">
+            <thead>
+              <tr>
+                <th>Timestamp</th>
+                <th>Name</th>
+                <th>Shape</th>
+                <th>Color</th>
+              </tr>
+            </thead>
+            <tbody id="shape-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

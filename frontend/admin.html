@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALPHV - Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-badge">A</div>
+        ALPHV
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html" class="active">Admin Portal</a>
+        <a href="index.html">User Portal</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-content">
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h1>Admin Portal</h1>
+          <button id="logout-btn">Log Out</button>
+        </div>
+
+        <form id="shape-form">
+          <div class="form-grid">
+
+            <div class="form-field">
+              <label>Name</label>
+              <input type="text" id="input-name" placeholder="e.g. Albert" required />
+            </div>
+
+            <div class="form-field">
+              <label>Shape</label>
+              <select id="input-shape" required>
+                <option value="Triangle">Triangle</option>
+                <option value="Square">Square</option>
+                <option value="Circle">Circle</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label>Color</label>
+              <div class="color-input-row">
+                <input type="color" id="input-color" value="#7C5CFC" />
+                <input type="text" id="input-color-text" value="#7C5CFC" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Timestamp</label>
+              <input type="datetime-local" id="input-timestamp" required />
+            </div>
+
+            <div class="form-field preview-field">
+              <label>Preview</label>
+              <div class="shape-preview" id="shape-preview"></div>
+            </div>
+
+          </div>
+
+          <button type="submit">Add Entry</button>
+        </form>
+
+        <p id="form-message"></p>
+
+        <div class="table-wrapper">
+          <div class="table-header">
+            <h2>Existing Data <span id="total-count" class="total-badge"></span></h2>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search by name or shape..."
+              class="search-input"
+            />
+          </div>
+
+          <table border="1" id="shape-table">
+            <thead>
+              <tr>
+                <th>Timestamp</th>
+                <th>Name</th>
+                <th>Shape</th>
+                <th>Color</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="shape-table-body"></tbody>
+          </table>
+          <button id="export-btn" class="export-btn">⬇ Export Data (CSV)</button>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="admin.js"></script>
+  <script src="export.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALPHV - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-badge">A</div>
+        ALPHV
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="login.html">Admin Portal</a>
+        <a href="index.html">User Portal</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Shape Dashboard</h1>
+
+      <div class="stat-cards" id="stat-cards"></div>
+
+    <div class="dashboard-columns">
+
+  <div class="latest-entries-box column-half">
+    <h2>Latest Entries</h2>
+    <table id="latest-table">
+      <thead>
+        <tr>
+          <th>Shape</th>
+          <th>Color</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="latest-table-body"></tbody>
+    </table>
+  </div>
+
+  <div class="column-half stacked-column">
+    <div class="chart-box equal-box">
+      <h2>Shape Distribution</h2>
+      <div class="chart-canvas-wrapper">
+      <canvas id="distribution-chart"></canvas>
+    </div>
+    </div>
+
+    <div class="chart-box equal-box">
+      <h2>Daily Entries (Last 14 Days)</h2>
+      <div class="chart-canvas-wrapper"></div>
+      <canvas id="daily-chart"></canvas>
+    </div>
+  </div>
+
+</div>
+    </main>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+  <script src="export.js"></script>
+</body>
+</html>
