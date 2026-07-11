@@ -39,9 +39,9 @@ async function loadStats() {
 async function loadDailyChart() {
   try {
     const response = await fetch(DAILY_STATS_URL);
-    const dailyData = await response.json(); // array of {date, count}
+    const dailyData = await response.json(); 
 
-    const labels = dailyData.map((d) => d.date.slice(5)); // show "MM-DD" only
+    const labels = dailyData.map((d) => d.date.slice(5)); 
     const counts = dailyData.map((d) => d.count);
 
     renderDailyChart(labels, counts);
@@ -167,7 +167,7 @@ function renderDailyChart(labels, counts) {
 
 async function loadLatestEntries() {
   try {
-    const response = await fetch("cat /etc/nginx/sites-available/alphv/api/shapes/latest");
+    const response = await fetch("/api/shapes/latest");
     const entries = await response.json();
     renderLatestEntries(entries);
   } catch (error) {
