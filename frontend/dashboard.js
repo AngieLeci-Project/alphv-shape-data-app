@@ -1,5 +1,5 @@
-const STATS_URL = "http://localhost:3221/api/stats";
-const DAILY_STATS_URL = "http://localhost:3221/api/stats/daily";
+const STATS_URL = "/api/stats";
+const DAILY_STATS_URL = "/api/stats/daily";
 
 const SHAPE_CONFIG = {
   Triangle: { label: "Triangles", color: "#7C5CFC" },
@@ -167,7 +167,7 @@ function renderDailyChart(labels, counts) {
 
 async function loadLatestEntries() {
   try {
-    const response = await fetch("http://localhost:3221/api/shapes/latest");
+    const response = await fetch("cat /etc/nginx/sites-available/alphv/api/shapes/latest");
     const entries = await response.json();
     renderLatestEntries(entries);
   } catch (error) {

@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:3221/api/shapes";
-const LOGOUT_URL = "http://localhost:3221/api/logout";
+const API_URL = "/api/shapes";
+const LOGOUT_URL = "/api/logout";
 
 const form = document.getElementById("shape-form");
 const messageEl = document.getElementById("form-message");

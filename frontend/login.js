@@ -1,4 +1,4 @@
-const LOGIN_URL = "http://localhost:3221/api/login";
+const LOGIN_URL = "/api/login";
 
 const form = document.getElementById("login-form");
 const messageEl = document.getElementById("login-message");

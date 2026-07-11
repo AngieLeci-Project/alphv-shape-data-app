@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3221/api/shapes";
+const API_URL = "/api/shapes";
 const POLL_INTERVAL_MS = 3000;
 
 
